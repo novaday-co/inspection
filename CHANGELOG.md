@@ -1,3 +1,4 @@
+## [0.0.8] - Change files and directory structure
 ## [0.0.7] - Better Readme
 ## [0.0.6] - Better Readme
 ## [0.0.5] - Better Readme
