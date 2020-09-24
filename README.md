@@ -40,7 +40,7 @@ Alternatively, your editor might support flutter pub get. Check the docs for you
 Now in your Dart code, you can use:
 
 ```dart
-import 'package:inspection/Inspection.dart';
+import 'package:inspection/inspection.dart';
 ```
 
 ## Basic Usage :
