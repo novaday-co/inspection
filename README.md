@@ -21,7 +21,7 @@ Add this to your package's pubspec.yaml file:
 
 ```yaml
 dependencies:
-  inspection: ^0.0.2
+  inspection: ^0.0.3
 ```
 
 Then You can install packages from the command line:
@@ -54,7 +54,7 @@ You can use **Inspection** class :
 
 ```dart
   TextFormField(
-    validator: (input) => Inspection().inspect(value, 'required|float'),
+    validator: (input) => Inspection().inspect(input, 'required|float'),
   ),
 ```
 
