@@ -13,7 +13,7 @@
 
 # Inspection
 
-Inspection , validation for flutter and dart . With **Inspection** you can validate your inputs in **Dart** like **Laravel Framework**.
+With **Inspection** you can validate your inputs in **Flutter** & **Dart** like **Laravel Framework**.
 
 ## How to install :
 
@@ -21,7 +21,7 @@ Add this to your package's pubspec.yaml file:
 
 ```yaml
 dependencies:
-  inspection: ^0.0.3
+  inspection: ^0.0.5
 ```
 
 Then You can install packages from the command line:
