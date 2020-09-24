@@ -62,7 +62,7 @@ TextFormField(
 ```
 
 ## Options :
-You can set attribute name , custom message and locale . For example :
+You can set **attribute name** , **custom message** and **locale** . For example :
 
 ```
 TextFormField(
@@ -105,7 +105,7 @@ TextFormField(
 
 ## Locales :
 
-**Inspection** support two languages now . **english** woth code : **en** , and **persian** with code **fa** . You can set locale when initialize **inspection** or in optional parameter of **inspect** method. For example : 
+**Inspection** support two languages now . **english** with code : **en** , and **persian** with code **fa** . You can set locale when initialize **inspection** or in optional parameter of **inspect** method. For example : 
 
 ```
   TextFormField(
