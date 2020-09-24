@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:inspection/Inspection.dart';
+import 'package:inspection/inspection.dart';
 
 void main() {
   test('test a required string validation', () {

@@ -25,12 +25,18 @@ dependencies:
 ```
 
 Then You can install packages from the command line:
+```yaml
+$ pub get
+```
+
+or
 
 ```yaml
 $ flutter pub get
 ```
 
 Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
+
 Now in your Dart code, you can use:
 
 ```dart
@@ -127,7 +133,7 @@ TextFormField(
 ```
 
 ## Custom Rules :
-You can simply extend from **Inspection** class and develop you custom rule . For example :
+You can simply extend from **Inspection** class and develop your custom rule . For example :
 
 ```dart
 class CustomInspection extends Inspection {

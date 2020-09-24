@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inspection/Inspection.dart';
+import 'package:inspection/inspection.dart';
 
 void main() => runApp(MyApp());
 
