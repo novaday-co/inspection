@@ -1,0 +1,17 @@
+name: inspection
+description: validation forms and data for Dart and Flutter
+version: 0.0.2
+homepage: https://github.com/faridfr/inspection
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
