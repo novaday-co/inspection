@@ -13,7 +13,7 @@ class RuleStructure extends Translator {
   bool ignoreEmptyInput = true;
 
   RuleStructure(InspectionCase inspectionCaseObject) {
-    name = inspectionCaseObject.name ?? '';
+    name = inspectionCaseObject.name;
     input = inspectionCaseObject.input ?? '';
     message = inspectionCaseObject.message ?? '';
     locale = inspectionCaseObject.locale ?? 'en';
