@@ -28,7 +28,7 @@ import 'package:inspection/Inspection.dart';
 
 You have a form , you want to validate inputs everyday in programming . With **Inspection** you can validate your inputs seems like **Laravel Framework** in **Dart** . See examples below .
 
-You except a required number with many conditions and rules :
+You expect a required number with many conditions and rules :
 in this case , we get help from **Inspection** helper function .
 
 ```
