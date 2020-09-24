@@ -1,10 +1,2 @@
-## [0.0.10] - Change locale strings
-## [0.0.9] - Translate attribute field in messages
-## [0.0.8] - Change files and directory structure
-## [0.0.7] - Better Readme
-## [0.0.6] - Better Readme
-## [0.0.5] - Better Readme
-## [0.0.4] - Better Readme
-## [0.0.3] - Better Readme
-## [0.0.2] - Better Readme
-## [0.0.1] - First version for develop
+## [0.0.11] - develop
+
