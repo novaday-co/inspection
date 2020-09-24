@@ -21,7 +21,7 @@ Add this to your package's pubspec.yaml file:
 
 ```yaml
 dependencies:
-  inspection: ^0.0.6
+  inspection: ^0.0.7
 ```
 
 Then You can install packages from the command line:
@@ -45,10 +45,10 @@ import 'package:inspection/inspection.dart';
 
 ## Basic Usage :
 
-You have a form , you want to validate inputs everyday in programming . With **Inspection** you can validate your inputs seems like **Laravel Framework** in **Dart** . See examples below .
+You have a form , you want to validate inputs everyday in programming . With **Inspection** you can validate your inputs in **Dart** like **Laravel Framework** . See examples below .
 
 You expect a required number with many conditions and rules :
-in this case , we get help from **Inspection** helper function .
+In this case , we get help from **Inspection** helper function .
 
 ```dart
   TextFormField(
@@ -64,7 +64,7 @@ You can use **Inspection** class :
   ),
 ```
 
-And you can use helper function and **Inspection** class with List of rules , so you can make a global validation configuration List and you can change your rules in whole of the application whenever you want.
+And you can use helper function and **Inspection** class with **List** of rules , so you can make a global validation configuration List and you can change your rules in whole of the application whenever you want.
 
 ```dart
   TextFormField(
@@ -81,7 +81,7 @@ TextFormField(
 ```
 
 ## Options :
-You can set **attribute name** , **custom message** and **locale** . For example :
+You can set attribute **name** , custom **message** and **locale** . For example :
 
 ```dart
 TextFormField(
@@ -124,11 +124,19 @@ TextFormField(
 
 ## Locales :
 
-**Inspection** support two languages now . **english** with code : **en** , and **persian** with code **fa** . You can set locale when initialize **inspection** or in optional parameter of **inspect** method. For example : 
+**Inspection** supports two languages now . **English** with code : **en** , and **Persian** with code **fa** . You can set locale when initialize **inspection** or in optional parameter of **inspect** method. For example : 
 
 ```dart
   TextFormField(
     validator: (input) => Inspection(inspectionLocale : 'fa').inspect(input, 'required|in:farid,farhad'),
+  ),
+```
+
+or
+
+```dart
+  TextFormField(
+    validator: (input) => Inspection().inspect(input, 'required|in:farid,farhad',locale:'fa'),
   ),
 ```
 
