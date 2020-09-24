@@ -6,21 +6,21 @@ Inspection , validation for flutter and dart . With **Inspection** you can valid
 
 Add this to your package's pubspec.yaml file:
 
-```
+```yaml
 dependencies:
   inspection: ^0.0.1
 ```
 
 Then You can install packages from the command line:
 
-```
+```yaml
 $ flutter pub get
 ```
 
 Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
 Now in your Dart code, you can use:
 
-```
+```dart
 import 'package:inspection/Inspection.dart';
 ```
 
@@ -31,7 +31,7 @@ You have a form , you want to validate inputs everyday in programming . With **I
 You expect a required number with many conditions and rules :
 in this case , we get help from **Inspection** helper function .
 
-```
+```dart
   TextFormField(
     validator: (input) => inspection(input, 'required|numeric|between:2000,6000|contains:22,33,55|ends_with:0'),
   ),
@@ -39,7 +39,7 @@ in this case , we get help from **Inspection** helper function .
 
 You can use **Inspection** class :
 
-```
+```dart
   TextFormField(
     validator: (input) => Inspection().inspect(value, 'required|float'),
   ),
@@ -47,7 +47,7 @@ You can use **Inspection** class :
 
 And you can use helper function and **Inspection** class with List of rules , so you can make a global validation configuration List and you can change your rules in whole of the application whenever you want.
 
-```
+```dart
   TextFormField(
     validator: (input) => inspection(input, ['required','float']),
   ),
@@ -55,7 +55,7 @@ And you can use helper function and **Inspection** class with List of rules , so
 
 or 
 
-```
+```dart
 TextFormField(
     validator: (input) => inspec(input, ['required','float']),
   ),
@@ -64,7 +64,7 @@ TextFormField(
 ## Options :
 You can set **attribute name** , **custom message** and **locale** . For example :
 
-```
+```dart
 TextFormField(
     validator: (input) => inspec(input, 'required|float',message: 'my custom message here !'),
   ),
@@ -107,7 +107,7 @@ TextFormField(
 
 **Inspection** support two languages now . **english** with code : **en** , and **persian** with code **fa** . You can set locale when initialize **inspection** or in optional parameter of **inspect** method. For example : 
 
-```
+```dart
   TextFormField(
     validator: (input) => Inspection(inspectionLocale : 'fa').inspect(input, 'required|in:farid,farhad'),
   ),
@@ -116,7 +116,7 @@ TextFormField(
 ## Custom Rules :
 You can simply extend from **Inspection** class and develop you custom rule . For example :
 
-```
+```dart
 class CustomInspection extends Inspection {
   String myCustomRule(ruleString, inspectionCase) {
     switch (ruleString) {
