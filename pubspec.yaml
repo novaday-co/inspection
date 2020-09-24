@@ -1,6 +1,6 @@
 name: inspection
-description: validation forms and data in Dart and Flutter like Laravel framework
-version: 0.0.4
+description: validation form inputs and data in Dart & Flutter like Laravel framework
+version: 0.0.5
 homepage: https://github.com/faridfr/inspection
 
 environment:
