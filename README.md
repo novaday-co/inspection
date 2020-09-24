@@ -1,6 +1,19 @@
+<p align="center">
+<img src="http://s14.picofile.com/file/8409159842/inspection_header.png" height="300" alt="Flutter Inspection Package" />
+</p>
+
+<p align="center">
+<a href="https://pub.dev/packages/inspection"><img src="https://img.shields.io/pub/v/inspection.svg" alt="Pub"></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-purple.svg" alt="License: MIT"></a>
+</p>
+
+
+---
+
+
 # Inspection
 
-Inspection , validation for flutter and dart . With **Inspection** you can validate your inputs seems like **Laravel Framework** in **Dart**
+Inspection , validation for flutter and dart . With **Inspection** you can validate your inputs in **Dart** like **Laravel Framework**.
 
 ## How to install :
 
@@ -8,7 +21,7 @@ Add this to your package's pubspec.yaml file:
 
 ```yaml
 dependencies:
-  inspection: ^0.0.1
+  inspection: ^0.0.2
 ```
 
 Then You can install packages from the command line:
@@ -98,7 +111,7 @@ TextFormField(
 | integer	 	| The attribute must be integer 	| inspect(input,'integer') 		|
 | number	 	| The attribute must contains only number 	| inspect(input,'number') 		|
 | regex	 		| The attribute must match with regex 	| inspect(input,'regex:\^[a-zA-Z0-9]') 		|
-| required	 	| TThe attribute field is required 	| inspect(input,'required') 	|
+| required	 	| The attribute field is required 	| inspect(input,'required') 	|
 | starts_with	| The attribute must starts with your pattern 	| inspect(input,'starts_with:hi') 	|
 | url	 		| The attribute must be a valid url 	| inspect(input,'url') 			|
 
