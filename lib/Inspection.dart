@@ -6,7 +6,7 @@ import 'package:inspection/Inspector.dart';
 class Inspection extends Inspector {
   String inspectionLocale = 'en';
 
-  Inspection({String inspectionLocale}){
+  Inspection({String inspectionLocale}) {
     this.inspectionLocale = inspectionLocale;
   }
 
