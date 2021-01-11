@@ -99,7 +99,7 @@ TextFormField(
 | alpha_num	 	| The attribute must contains only letters and numbers 	| inspect(input,'alpha_num')	|
 | between	 	| The attribute must be between :min and :max 	| inspect(input,'between:3,9')	 	|
 | contains	 	| The attribute must contains one of your worlds 	| inspect(input,'contains:farid,farhad')	 	|
-| email	 		| The attribute is not a valid email 	| inspect(input,'email')	 	|
+| email	 		| The attribute must be a valid email 	| inspect(input,'email')	 	|
 | ends_with	 	| The attribute must ends with your pattern 	| inspect(input,'ends_with:bye')	|
 | gt	 		| The attribute must grater than :gt 	| inspect(input,'gt:10')	 		|
 | gte	 		| The attribute must grater than or equal to :gte 	| inspect(input,'gte:10')	 		|
