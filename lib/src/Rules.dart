@@ -6,6 +6,7 @@ import 'package:inspection/src/Rules/EndWith.dart';
 import 'package:inspection/src/Rules/HaveAlpha.dart';
 import 'package:inspection/src/Rules/Hex.dart';
 import 'package:inspection/src/Rules/IP.dart';
+import 'package:inspection/src/Rules/IranNationalCode.dart';
 import 'package:inspection/src/Rules/Max.dart';
 import 'package:inspection/src/Rules/Min.dart';
 import 'package:inspection/src/Rules/NotIn.dart';
@@ -77,6 +78,8 @@ class Rules {
         return Regex(inspectionCase).stringValidation();
       case 'between':
         return Between(inspectionCase).stringValidation();
+      case 'iran_national_code':
+        return IranNationalCode(inspectionCase).stringValidation();
     }
   }
 }

@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/faridfr/inspection/master/assets/inspection_header.png" height="170" alt="Flutter Inspection Package" />
+<img src="https://raw.githubusercontent.com/farazin-co/inspection/master/assets/inspection_header.png" height="170" alt="Flutter Inspection Package" />
 </p>
 
 <p align="center">
@@ -76,7 +76,7 @@ or
 
 ```dart
 TextFormField(
-    validator: (input) => inspec(input, ['required','float']),
+    validator: (input) => inspect(input, ['required','float']),
   ),
 ```
 
@@ -85,7 +85,7 @@ You can set attribute **name** , custom **message** and **locale** . For example
 
 ```dart
 TextFormField(
-    validator: (input) => inspec(input, 'required|float',message: 'my custom message here !'),
+    validator: (input) => inspect(input, 'required|float',message: 'my custom message here !'),
   ),
 ```
 
@@ -95,6 +95,7 @@ TextFormField(
 
 | Rule       	| Description                         	| Example                     	|
 |------------	|-------------------------------------	|-----------------------------	|
+| iran_national_code	| Input must be a iranian national code | inspect(input,'iran_national_code') 	|
 | have_alpha 	| The attribute must have alpha in it 	| inspect(input,'have_alpha') 	|
 | alpha_num	 	| The attribute must contains only letters and numbers 	| inspect(input,'alpha_num')	|
 | between	 	| The attribute must be between :min and :max 	| inspect(input,'between:3,9')	 	|

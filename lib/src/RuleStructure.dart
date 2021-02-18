@@ -13,7 +13,7 @@ class RuleStructure extends Translator {
   bool ignoreEmptyInput = true;
 
   RuleStructure(InspectionCase inspectionCaseObject) {
-    name = inspectionCaseObject.name;
+    name = inspectionCaseObject.name ?? '';
     input = inspectionCaseObject.input ?? '';
     message = inspectionCaseObject.message ?? '';
     locale = inspectionCaseObject.locale ?? 'en';
@@ -51,21 +51,23 @@ class RuleStructure extends Translator {
       return makeResponse('failure');
     else
       return makeResponse('success');
-
     if (ignoreEmptyInput || input.toString().length != 0) {
       if (!["", null, false, 0].contains(input)) {
         if (manualCheck())
           return makeResponse('success');
-        else if (regex != '' && regex != null) if (validateRegEx(regex, input))
-          return makeResponse('success');
-        else
-          return makeResponse('failure');
-        else
+        else if (regex != '' && regex != null) {
+          if (validateRegEx(regex, input))
+            return makeResponse('success');
+          else
+            return makeResponse('failure');
+        } else
           return makeResponse('failure');
       } else
         return makeResponse('success');
-    } else
-      return makeResponse('success');
+    } else if (!ignoreEmptyInput) {
+      return makeResponse('failure');
+    }
+    return makeResponse('success');
   }
 
   bool boolValidation() {
@@ -77,14 +79,17 @@ class RuleStructure extends Translator {
       if (!["", null, false, 0].contains(input)) {
         if (manualCheck())
           return true;
-        else if (regex != '' && regex != null) if (validateRegEx(regex, input))
-          return true;
-        else
-          return false;
-        else
+        else if (regex != '' && regex != null) {
+          if (validateRegEx(regex, input)) {
+            return true;
+          } else
+            return false;
+        } else
           return false;
       } else
         return true;
+    } else if (!ignoreEmptyInput) {
+      return false;
     } else
       return true;
   }
