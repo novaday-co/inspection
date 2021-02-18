@@ -47,7 +47,8 @@ class MyCustomFormState extends State<MyCustomForm> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           TextFormField(
-            validator: (value) => Inspection().inspect(value, 'gt:2'),
+            validator: (value) =>
+                Inspection().inspect(value, 'iran_national_code'),
             // validator: (value) => inspection(value, ['required','float']),
             // validator: (value) =>  Inspection.validate(value, 'required|float'),
             // validator: (value) =>  Inspection.validate(value, ['required','float']),
