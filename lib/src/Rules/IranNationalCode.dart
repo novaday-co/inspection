@@ -8,9 +8,7 @@ class IranNationalCode extends RuleStructure implements RuleAbstract {
   double minCondition;
 
   IranNationalCode(InspectionCase inspectionCaseObject)
-      : super(inspectionCaseObject) {
-    ignoreEmptyInput = false;
-  }
+      : super(inspectionCaseObject);
 
   @override
   bool manualCheck() {

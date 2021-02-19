@@ -1,7 +1,7 @@
 name: inspection
 description: validation form inputs and data in Dart & Flutter like Laravel framework
-version: 0.0.11
-homepage: https://github.com/faridfr/inspection
+version: 0.0.12
+homepage: https://github.com/farazin-co/inspection
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

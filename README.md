@@ -21,7 +21,7 @@ Add this to your package's pubspec.yaml file:
 
 ```yaml
 dependencies:
-  inspection: ^0.0.11
+  inspection: ^0.0.12
 ```
 
 Then You can install packages from the command line:
