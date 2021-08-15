@@ -3,14 +3,14 @@ import 'package:inspection/src/InspectionCase.dart';
 import 'package:inspection/src/RuleStructure.dart';
 
 class Regex extends RuleStructure implements RuleAbstract {
-  String inputRegex;
+  String? inputRegex;
 
   Regex(InspectionCase inspectionCaseObject) : super(inspectionCaseObject) {
     inputRegex = rule.split(':')[1];
   }
 
   @override
-  String regex = '';
+  String? regex = '';
 
   @override
   bool manualCheck() {

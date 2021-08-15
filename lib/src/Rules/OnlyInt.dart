@@ -6,7 +6,7 @@ class OnlyInt extends RuleStructure implements RuleAbstract {
   OnlyInt(InspectionCase inspectionCaseObject) : super(inspectionCaseObject);
 
   @override
-  String regex = r'^(?:-?(?:0|[1-9][0-9]*))$';
+  String? regex = r'^(?:-?(?:0|[1-9][0-9]*))$';
 
   @override
   dynamic customMessage() {

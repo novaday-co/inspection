@@ -5,7 +5,7 @@ import 'package:inspection/src/RuleStructure.dart';
 import '../Locales/fa.dart';
 
 class IranNationalCode extends RuleStructure implements RuleAbstract {
-  double minCondition;
+  double? minCondition;
 
   IranNationalCode(InspectionCase inspectionCaseObject)
       : super(inspectionCaseObject);
@@ -25,9 +25,9 @@ class IranNationalCode extends RuleStructure implements RuleAbstract {
       "9999999999"
     ];
 
-    if (input.trim().isEmpty) {
+    if (input!.trim().isEmpty) {
       return false; // Iranian national Code is empty
-    } else if (input.trim().length != 10) {
+    } else if (input!.trim().length != 10) {
       return false; // Iranian national Code is less or more than 10 digits
     } else if (identicalDigits.contains(input)) {
       return false; // Fake Iranian national Code
@@ -35,7 +35,7 @@ class IranNationalCode extends RuleStructure implements RuleAbstract {
       int sum = 0;
 
       for (int i = 0; i < 9; i++) {
-        sum += int.parse(input[i]) * (10 - i);
+        sum += int.parse(input![i]) * (10 - i);
       }
 
       int lastDigit;
@@ -47,7 +47,7 @@ class IranNationalCode extends RuleStructure implements RuleAbstract {
         lastDigit = 11 - (divideRemaining);
       }
 
-      if (int.parse(input[9]) == lastDigit) {
+      if (int.parse(input![9]) == lastDigit) {
         // is valid Iranian national code
         return true;
       } else {
