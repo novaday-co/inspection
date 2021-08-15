@@ -24,6 +24,7 @@ import 'package:inspection/src/Rules/GTE.dart';
 import 'package:inspection/src/Rules/LT.dart';
 import 'package:inspection/src/Rules/LTE.dart';
 import 'package:inspection/src/Rules/In.dart';
+import 'package:inspection/src/Rules/iran_mobile.dart';
 
 class Rules {
   checkRule(ruleString, inspectionCase) {
@@ -80,6 +81,8 @@ class Rules {
         return Between(inspectionCase).stringValidation();
       case 'iran_national_code':
         return IranNationalCode(inspectionCase).stringValidation();
+      case 'iran_mobile':
+        return IranMobile(inspectionCase).stringValidation();
     }
   }
 }
