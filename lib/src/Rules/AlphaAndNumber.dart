@@ -3,11 +3,10 @@ import 'package:inspection/src/InspectionCase.dart';
 import 'package:inspection/src/RuleStructure.dart';
 
 class AlphaAndNumber extends RuleStructure implements RuleAbstract {
-  AlphaAndNumber(InspectionCase inspectionCaseObject)
-      : super(inspectionCaseObject);
+  AlphaAndNumber(InspectionCase inspectionCaseObject) : super(inspectionCaseObject);
 
   @override
-  String regex = r'^[a-zA-Z0-9]+$';
+  String? regex = r'^[a-zA-Z0-9]+$';
 
   @override
   dynamic customMessage() {

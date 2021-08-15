@@ -3,17 +3,18 @@ import 'package:inspection/src/Translator.dart';
 
 // Rule Structure
 class RuleStructure extends Translator {
-  String name;
-  String input;
-  String message;
-  String regex = '';
-  String locale;
+  String? name;
+  String? input;
+  String? message;
+  String? regex = '';
+  String? locale;
+
   dynamic rule;
   dynamic inspectionCase;
-  bool ignoreEmptyInput = true;
+  bool? ignoreEmptyInput = true;
 
-  RuleStructure(InspectionCase inspectionCaseObject) {
-    name = inspectionCaseObject.name ?? '';
+  RuleStructure(InspectionCase? inspectionCaseObject) {
+    name = inspectionCaseObject!.name;
     input = inspectionCaseObject.input ?? '';
     message = inspectionCaseObject.message ?? '';
     locale = inspectionCaseObject.locale ?? 'en';
@@ -29,7 +30,7 @@ class RuleStructure extends Translator {
     return (message == '' || message == null)
         ? (customMessage() is String)
             ? customMessage()
-            : name + ' validation error'
+            : name! + ' validation error'
         : message;
   }
 
@@ -37,8 +38,8 @@ class RuleStructure extends Translator {
     return input;
   }
 
-  bool validateRegEx(regex, input) {
-    RegExp regExp = new RegExp(regex);
+  bool validateRegEx(regex, input, {caseSensitive = true}) {
+    RegExp regExp = new RegExp(regex, caseSensitive: caseSensitive);
     return regExp.hasMatch(cleanRegExpInput(input)) ? true : false;
   }
 
@@ -46,12 +47,12 @@ class RuleStructure extends Translator {
     return false;
   }
 
-  String stringValidation() {
+  String? stringValidation() {
     if (rule == 'required') if (["", null, false, 0].contains(input))
       return makeResponse('failure');
     else
       return makeResponse('success');
-    if (ignoreEmptyInput || input.toString().length != 0) {
+    if (ignoreEmptyInput! || input.toString().length != 0) {
       if (!["", null, false, 0].contains(input)) {
         if (manualCheck())
           return makeResponse('success');
@@ -64,7 +65,7 @@ class RuleStructure extends Translator {
           return makeResponse('failure');
       } else
         return makeResponse('success');
-    } else if (!ignoreEmptyInput) {
+    } else if (!ignoreEmptyInput!) {
       return makeResponse('failure');
     }
     return makeResponse('success');
@@ -75,7 +76,7 @@ class RuleStructure extends Translator {
       return false;
     else
       return true;
-    if (ignoreEmptyInput || input.toString().length != 0) {
+    if (ignoreEmptyInput! || input.toString().length != 0) {
       if (!["", null, false, 0].contains(input)) {
         if (manualCheck())
           return true;
@@ -88,25 +89,22 @@ class RuleStructure extends Translator {
           return false;
       } else
         return true;
-    } else if (!ignoreEmptyInput) {
+    } else if (!ignoreEmptyInput!) {
       return false;
     } else
       return true;
   }
 
-  String makeResponse(status) {
+  String? makeResponse(status) {
     switch (status) {
       case 'success':
         return null;
-        break;
 
       case 'failure':
         return setMessage();
-        break;
 
       default:
         return null;
-        break;
     }
   }
 }

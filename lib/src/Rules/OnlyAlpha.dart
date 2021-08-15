@@ -6,7 +6,7 @@ class OnlyAlpha extends RuleStructure implements RuleAbstract {
   OnlyAlpha(InspectionCase inspectionCaseObject) : super(inspectionCaseObject);
 
   @override
-  String regex = r'^[a-zA-Z]+$';
+  String? regex = r'^[a-zA-Z]+$';
 
   @override
   dynamic customMessage() {

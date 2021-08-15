@@ -2,9 +2,9 @@
 class InspectionCase {
   dynamic input;
   dynamic rule = '';
-  String name = '';
-  String message = '';
-  String locale = 'en';
+  String? name = '';
+  String? message = '';
+  String? locale = 'en';
 
   InspectionCase(input, rule, name, message, locale) {
     this.input = input;

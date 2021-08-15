@@ -7,7 +7,7 @@ class Numeric extends RuleStructure implements RuleAbstract {
 
   @override
   bool manualCheck() {
-    return double.tryParse(input) != null;
+    return double.tryParse(input!) != null;
   }
 
   @override

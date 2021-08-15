@@ -4,7 +4,7 @@ import 'package:inspection/src/Rules/Numeric.dart';
 import 'package:inspection/src/RuleStructure.dart';
 
 class GT extends RuleStructure implements RuleAbstract {
-  double condition;
+  double? condition;
 
   GT(InspectionCase inspectionCaseObject) : super(inspectionCaseObject) {
     condition = double.parse(rule.split(':')[1]);
@@ -13,13 +13,13 @@ class GT extends RuleStructure implements RuleAbstract {
   @override
   bool manualCheck() {
     if (Numeric(inspectionCase).boolValidation())
-      return double.parse(input) > condition.toDouble();
+      return double.parse(input!) > condition!.toDouble();
     else
       return false;
   }
 
   @override
   dynamic customMessage() {
-    return trans('gt', {'name': name, 'gt': condition.toDouble().toString()});
+    return trans('gt', {'name': name, 'gt': condition!.toDouble().toString()});
   }
 }

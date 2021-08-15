@@ -6,7 +6,7 @@ class HaveAlpha extends RuleStructure implements RuleAbstract {
   HaveAlpha(InspectionCase inspectionCaseObject) : super(inspectionCaseObject);
 
   @override
-  String regex = '([A-Za-z])+';
+  String? regex = '([A-Za-z])+';
 
   @override
   dynamic customMessage() {

@@ -7,7 +7,7 @@ class Url extends RuleStructure implements RuleAbstract {
 
   @override
   bool manualCheck() {
-    return Uri.parse(input).isAbsolute;
+    return Uri.parse(input!).isAbsolute;
   }
 
   @override
