@@ -24,5 +24,6 @@ const fa = {
   'required': ':name نباید خالی باشد',
   'starts_with': ':name باید با :pattern شروع شود',
   'url': ':name یک آدرس معتبر وبسایت نیست',
-  'iran_national_code': ":code معتبر نیست"
+  'iran_national_code': ":code معتبر نیست",
+  'iran_mobile': ':name شماره موبایل صحیح نیست',
 };
