@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/farazin-co/inspection/master/assets/inspection_header.png" height="170" alt="Flutter Inspection Package" />
+<img src="https://raw.githubusercontent.com/novaday-co/inspection/master/assets/inspection_header.png" height="170" alt="Flutter Inspection Package" />
 </p>
 
 <p align="center">
