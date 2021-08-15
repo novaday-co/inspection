@@ -24,7 +24,7 @@ import 'package:inspection/src/Rules/GTE.dart';
 import 'package:inspection/src/Rules/LT.dart';
 import 'package:inspection/src/Rules/LTE.dart';
 import 'package:inspection/src/Rules/In.dart';
-import 'package:inspection/src/Rules/iran_mobile.dart';
+import 'package:inspection/src/Rules/IranMobile.dart';
 
 class Rules {
   checkRule(ruleString, inspectionCase) {

@@ -14,7 +14,7 @@ class Min extends RuleStructure implements RuleAbstract {
     if (input is String)
       return input!.length >= minCondition!;
     else
-      return input.toString().length >= minCondition!;
+      return input!.toString().length >= minCondition!;
   }
 
   @override

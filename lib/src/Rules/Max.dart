@@ -14,7 +14,7 @@ class Max extends RuleStructure implements RuleAbstract {
     if (input is String)
       return input!.length <= maxCondition!;
     else
-      return input.toString().length <= maxCondition!;
+      return input!.toString().length <= maxCondition!;
   }
 
   @override

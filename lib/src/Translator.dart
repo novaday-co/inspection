@@ -13,13 +13,15 @@ class Translator {
   }
 
   // Translate method
-  trans(String code, [Map? variables]) {
+  trans(String code, [Map<String?, String?>? variables]) {
     String mainSentence = 'Validation Error';
 
     if (dictionary![locale] != null) if (dictionary![locale][code] != null)
       mainSentence = dictionary![locale][code];
 
-    variables!.forEach((index, value) {
+    variables!.forEach((index,value) {
+      index = index ?? '';
+      value = value ?? '';
       mainSentence = mainSentence.replaceAll(':' + index, value);
     });
 
