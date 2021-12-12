@@ -125,7 +125,7 @@ TextFormField(
 
 ## Locales :
 
-**Inspection** supports two languages now . **English** with code : **en** , and **Persian** with code **fa** . You can set locale when initialize **inspection** or in optional parameter of **inspect** method. For example : 
+**Inspection** supports two languages now . **English** with code : **en** , and **Persian** with code **fa** and **Vietnamese** with code **vi**. You can set locale when initialize **inspection** or in optional parameter of **inspect** method. For example : 
 
 ```dart
   TextFormField(
