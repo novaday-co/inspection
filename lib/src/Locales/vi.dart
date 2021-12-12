@@ -24,5 +24,6 @@ const vi = {
   'required': ':name trường này là bắt buộc',
   'starts_with': ':name phải bắt đầu bằng :pattern',
   'url': ':name không phải là một url hợp lệ',
-  'iran_national_code': ":code không hợp lệ"
+  'iran_national_code': ":code không hợp lệ",
+  'iran_mobile': ':name dữ liệu không hợp lệ',
 };

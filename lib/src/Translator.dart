@@ -1,5 +1,6 @@
 import 'package:inspection/src/Locales/en.dart';
 import 'package:inspection/src/Locales/fa.dart';
+import 'package:inspection/src/Locales/vi.dart';
 
 // Translate rule's custom messages with locale code
 class Translator {
@@ -10,6 +11,7 @@ class Translator {
   Translator() {
     dictionary!['en'] = en;
     dictionary!['fa'] = fa;
+    dictionary!['vi'] = vi;
   }
 
   // Translate method

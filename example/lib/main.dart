@@ -48,7 +48,7 @@ class MyCustomFormState extends State<MyCustomForm> {
         children: <Widget>[
           TextFormField(
             validator: (value) =>
-                Inspection().inspect(value, 'iran_mobile'),
+                Inspection().inspect(value, 'integer|min:3|gt:150'),
             // validator: (value) => inspection(value, ['required','float']),
             // validator: (value) =>  Inspection.validate(value, 'required|float'),
             // validator: (value) =>  Inspection.validate(value, ['required','float']),

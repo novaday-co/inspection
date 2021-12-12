@@ -24,5 +24,6 @@ const en = {
   'required': ':name field is required',
   'starts_with': ':name must starts with :pattern pattern',
   'url': ':name is not a valid url',
-  'iran_national_code': ":code is not valid"
+  'iran_national_code': ":code is not valid",
+  'iran_mobile': ':name not valid',
 };
