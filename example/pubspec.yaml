@@ -21,7 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-#    inspection: ^0.0.13
+#    inspection: ^0.0.14
   flutter:
     sdk: flutter
   inspection:
